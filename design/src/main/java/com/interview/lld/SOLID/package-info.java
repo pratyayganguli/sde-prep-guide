@@ -1,6 +1,7 @@
 package com.interview.lld.SOLID;
 
 /**
+ * 
  * <p>
  *     SOLID principles
  *
@@ -37,8 +38,6 @@ package com.interview.lld.SOLID;
  *     storing the data in plain text format.
  *
  *     Dependency Inversion principle: A class should depend on interfaces rather than concrete classes.
- *
- *
- *
+ *     Please refer to the dependency-inversion-example package to understand better.
  * </p>
  */

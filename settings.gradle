@@ -1,4 +1,5 @@
 rootProject.name = 'sde2-prep-guide'
 include 'dynamic-programming'
 include 'problem-solving'
+include 'design'
 

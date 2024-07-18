@@ -5,7 +5,7 @@ package com.interview.lld.SOLID.dependencyinversionexample;
  * Dependency inversion
  * depend on interfaces rather than concrete classes.
  */
-public class DemoApp {
+class DemoApp {
 
     // we are not taking the concrete classes rather we are doing constructor injection
     // by passing the object of the interface

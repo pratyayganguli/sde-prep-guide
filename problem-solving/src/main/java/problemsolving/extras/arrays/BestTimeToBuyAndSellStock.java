@@ -1,4 +1,4 @@
-package com.interview.problemsolving.extras.arrays;
+package problemsolving.extras.arrays;
 
 /**
  * You are given an integer array prices where prices[i] is the price of a given stock on the ith day.

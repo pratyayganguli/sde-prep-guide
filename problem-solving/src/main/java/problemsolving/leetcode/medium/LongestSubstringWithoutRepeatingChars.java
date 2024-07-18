@@ -1,4 +1,4 @@
-package com.interview.problemsolving.leetcode.medium;
+package problemsolving.leetcode.medium;
 
 /**
  *  Given a string s, find the length of the longest

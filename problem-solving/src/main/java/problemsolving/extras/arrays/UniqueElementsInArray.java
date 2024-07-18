@@ -1,4 +1,4 @@
-package com.interview.problemsolving.extras.arrays;
+package problemsolving.extras.arrays;
 
 import java.util.Arrays;
 import java.util.LinkedHashSet;
@@ -7,8 +7,7 @@ import java.util.Set;
 
 /**
  *
- * Using a linked hash set allows you to take care of the complexity.
- *
+ * Using a linked hash set allows you to take care of the order of the elements.
  */
 class UniqueElementsInArray {
 
