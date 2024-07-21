@@ -1,4 +1,4 @@
-package problemsolving.extras.arrays;
+package problemsolving.questions.extras.arrays;
 
 import java.util.Arrays;
 import java.util.LinkedHashSet;

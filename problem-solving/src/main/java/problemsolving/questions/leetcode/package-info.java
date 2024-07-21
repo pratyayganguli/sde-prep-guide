@@ -1,4 +1,4 @@
-package problemsolving.leetcode;
+package problemsolving.questions.leetcode;
 
 /**
  *

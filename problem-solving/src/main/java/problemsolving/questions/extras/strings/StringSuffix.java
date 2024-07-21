@@ -1,4 +1,4 @@
-package problemsolving.extras.strings;
+package problemsolving.questions.extras.strings;
 
 
 import java.util.ArrayList;

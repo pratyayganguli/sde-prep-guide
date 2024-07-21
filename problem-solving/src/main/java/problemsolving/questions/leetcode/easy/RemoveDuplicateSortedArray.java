@@ -1,4 +1,4 @@
-package problemsolving.leetcode.easy;
+package problemsolving.questions.leetcode.easy;
 
 
 import java.util.*;
