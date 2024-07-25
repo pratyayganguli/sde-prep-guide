@@ -27,10 +27,14 @@ class EvolvedSwitchStatements {
 
         // we can use rest of the data members to write alternative switch statements.
 
-        switch (id) {
-            case String v1 -> System.out.println("The type is string");
-            case Integer v2 -> System.out.println("The type is integer");
-            default -> System.out.println("could not detect object type");
-        }
+        /**
+         * commenting out the code so that it does not invoke any warnings
+         */
+//
+//        switch (id) {
+//            case String v1 -> System.out.println("The type is string");
+//            case Integer v2 -> System.out.println("The type is integer");
+//            default -> System.out.println("could not detect object type");
+//        }
     }
 }
