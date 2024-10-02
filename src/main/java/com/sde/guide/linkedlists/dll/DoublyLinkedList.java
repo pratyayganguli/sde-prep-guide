@@ -66,7 +66,55 @@ class DoublyLinkedList<T> {
     private void nullListHandler(T data) {
         System.out.println("There are no elements in the list!");
         head = new Node(data);
+        head.next = tail;
+        head.prev = tail;
         tail = head;
+        tail.prev = head;
+        tail.next = head;
+    }
+
+    /**
+     *
+     * pop element from the head
+     */
+
+    void deleteHead() {
+        if(head == null) {
+            System.out.println("No elements are present in the list");
+            return;
+        }
+        head = head.next;
+        head.prev = tail;
+        tail.next = head;
+        System.out.println("head: " + head.data + "; tail: " + tail.data);
+
+    }
+
+    void deleteTail() {
+        if(tail == null) {
+            System.out.println("No elements are present in the list");
+            return;
+        }
+
+        tail = tail.next;
+        head = tail.next;
+        head.prev = tail;
+        System.out.println("head: " + head.data + "; tail: " + tail.data);
+    }
+
+    void showNodes() {
+        if(head == null) {
+            System.out.println("no elements are present in the list");
+            return;
+        }
+        System.out.println("-----------------");
+        Node temp = head;
+        do {
+            System.out.println(temp.data);
+            temp = temp.next;
+
+        }while(temp != tail);
+        System.out.println("-----------------");
     }
 }
 
@@ -80,5 +128,9 @@ class Main {
         dll.insertTail("Tupac");
         dll.insertTail("JayZ");
         dll.insertTail("Biggie");
+        dll.showNodes();
+        dll.deleteHead();
+        dll.deleteTail();
+        dll.showNodes();
     }
 }
