@@ -105,11 +105,13 @@ class SinglyLinkedList<T> {
             System.out.println("list is empty!");
             return;
         } else {
+            System.out.println("--------------");
             Node temp = headNode;
             while(temp != null) {
                 System.out.println(temp.data);
                 temp = temp.next;
             }
+            System.out.println("--------------");
         }
     }
 
@@ -130,8 +132,6 @@ class SinglyLinkedList<T> {
     }
 
 
-    // fixme: Try to think of a way in which you can reverse the linked list
-
     Node reverse(Node headNode) {
         if(headNode == null || headNode.next == null) {
             System.out.println("list is empty!");
@@ -141,6 +141,22 @@ class SinglyLinkedList<T> {
              headNode.next.next = headNode;
              headNode.next = null;
              return reversedHead;
+        }
+    }
+
+    // Get the number of nodes for a Singly Linked List
+
+    int getCount(Node headNode) {
+        if(headNode == null) {
+            return 0;
+        } else {
+            int count = 0;
+            Node temp = headNode;
+            while(temp != null) {
+                count++;
+                temp = temp.next;
+            }
+            return count;
         }
     }
 }
@@ -168,5 +184,6 @@ class Main {
         // check is data exists
         System.out.println(sll.dataExists("Harsha"));
         sll.showNodes(sll.reverse(sll.getHead()));
+        System.out.println("Total number of nodes in the linked list: " + sll.getCount(sll.getHead()));
     }
 }
