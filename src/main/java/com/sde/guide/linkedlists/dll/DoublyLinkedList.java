@@ -1,6 +1,6 @@
 package com.sde.guide.linkedlists.dll;
 
-class DLL<T> {
+class DoublyLinkedList<T> {
 
     class Node {
         T data;
@@ -15,6 +15,11 @@ class DLL<T> {
 
     private Node head;
     private Node tail;
+    private int count;
+
+    public int getCount() {
+        return count;
+    }
 
     // by default the insert method is designed in such a way, that the insertion will take place in the head position
     void insert(T data) {
@@ -71,6 +76,7 @@ class DLL<T> {
     }
 
     void traverseNodes() {
+        count = 0;
         System.out.println(":::Traversal:::");
         if(head == null) {
             System.out.println("There is no node present!");
@@ -79,6 +85,7 @@ class DLL<T> {
             while(tempNode != null) {
                 System.out.println(tempNode.data);
                 tempNode = tempNode.next;
+                count++;
             }
         }
     }
@@ -117,7 +124,7 @@ class Main {
     public static void main(String[] args) {
         // create a reference variable to DLL object and call the operation methods.
 
-        DLL<String> friends = new DLL<>();
+        DoublyLinkedList<String> friends = new DoublyLinkedList<>();
         friends.insert("Ravi");
         friends.insert("Shami");
         friends.insert("Virat");
@@ -133,5 +140,7 @@ class Main {
         friends.traverseNodes();
         friends.update("Dhoni", "Rohit");
         friends.traverseNodes();
+
+        System.out.println(friends.getCount());
     }
 }
