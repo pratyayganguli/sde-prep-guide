@@ -71,6 +71,7 @@ class DLL<T> {
     }
 
     void traverseNodes() {
+        System.out.println(":::Traversal:::");
         if(head == null) {
             System.out.println("There is no node present!");
         } else {
@@ -94,6 +95,22 @@ class DLL<T> {
             }
         }
     }
+
+    void update(T data, T key) {
+        if(head == null) {
+            System.out.println("There are no elements in the list!");
+        } else {
+            Node tempNode = head;
+            while(tempNode != null ) {
+
+                // this is where we need to write the logic for updation of the node.
+                if(tempNode.data == key) {
+                    tempNode.data = data;
+                }
+                tempNode = tempNode.next;
+            }
+        }
+    }
 }
 
 class Main {
@@ -107,11 +124,14 @@ class Main {
         friends.insertTail("Rohit");
         friends.insertTail("Shubhman");
         friends.insertTail("Rahul");
+
         friends.traverseNodes();
         friends.reverseTraversal();
         friends.deleteHead();
         friends.traverseNodes();
         friends.deleteTail();
+        friends.traverseNodes();
+        friends.update("Dhoni", "Rohit");
         friends.traverseNodes();
     }
 }
