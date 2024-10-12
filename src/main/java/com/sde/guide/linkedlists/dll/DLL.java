@@ -47,6 +47,7 @@ class DLL<T> {
     }
 
     void reverseTraversal() {
+        System.out.println("::: Reverse Traversal :::");
         if(tail == null) {
             System.out.println("There is no node present!");
         } else {
@@ -67,7 +68,7 @@ class Main {
         friends.insert("Ravi");
         friends.insert("Shami");
         friends.insert("Virat");
-        //friends.traverseNodes();
+        friends.traverseNodes();
         friends.reverseTraversal();
     }
 }
