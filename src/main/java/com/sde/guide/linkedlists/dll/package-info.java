@@ -8,7 +8,7 @@ package com.sde.guide.linkedlists.dll;
  *
  * Update 13-10-24:
  * All the possible operation supported by dll have been added and one significant operation which is
- * reversing the linked list is left out and will be pushed by EoD.
+ * reversing the linked list has also been added.
  *
  * Questions directly/un-directly related to doubly linked list will also be addressed soon.
  */
