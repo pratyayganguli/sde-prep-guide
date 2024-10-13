@@ -118,6 +118,28 @@ class DoublyLinkedList<T> {
             }
         }
     }
+
+    // this function will insert the data in a specific position
+    void insert(int pos, T data) {
+        if(head == null) {
+            System.out.println("No elements are present in the linked list!");
+            return;
+        } else {
+            Node tempNode = new Node(data);
+            Node iterator = head;
+            int currentPos = 0;
+            while(iterator != null) {
+                if(currentPos == pos) {
+                    iterator.prev.next = tempNode;
+                    tempNode.prev = iterator.prev;
+                    tempNode.next = iterator;
+                    iterator.prev = tempNode;
+                }
+                iterator = iterator.next;
+                currentPos++;
+            }
+        }
+    }
 }
 
 class Main {
@@ -134,13 +156,15 @@ class Main {
 
         friends.traverseNodes();
         friends.reverseTraversal();
-        friends.deleteHead();
+        //friends.deleteHead();
         friends.traverseNodes();
-        friends.deleteTail();
+        //friends.deleteTail();
         friends.traverseNodes();
         friends.update("Dhoni", "Rohit");
         friends.traverseNodes();
 
         System.out.println(friends.getCount());
+        friends.insert(3, "Jignesh");
+        friends.traverseNodes();
     }
 }
