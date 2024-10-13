@@ -55,7 +55,6 @@ class DoublyLinkedList<T> {
         // head reference should be removed.
         if (head == null) {
             System.out.println("no elements are there in the head position");
-            return;
         } else {
             System.out.println("removing data from the list: " + head.data);
             head = head.next;
@@ -67,7 +66,6 @@ class DoublyLinkedList<T> {
         // tail reference should be removed.
         if (tail == null) {
             System.out.println("no elements are there in the tail position");
-            return;
         } else {
             System.out.println("removing data from the list: " + tail.data);
             tail = tail.prev;
@@ -123,7 +121,6 @@ class DoublyLinkedList<T> {
     void insert(int pos, T data) {
         if(head == null) {
             System.out.println("No elements are present in the linked list!");
-            return;
         } else {
             Node tempNode = new Node(data);
             Node iterator = head;
@@ -136,6 +133,26 @@ class DoublyLinkedList<T> {
                     iterator.prev = tempNode;
                 }
                 iterator = iterator.next;
+                currentPos++;
+            }
+        }
+    }
+
+    // this function will delete data from a specific position
+    void delete(int pos) {
+        if(head == null) {
+            System.out.println("There are no elements in the list!");
+        } else {
+            int currentPos = 0;
+            Node tempNode = head;
+
+            while(tempNode != null) {
+                if(currentPos == pos) {
+                    // write the logic for deletion
+                    tempNode.prev.next = tempNode.next;
+                    tempNode.next.prev = tempNode.prev;
+                }
+                tempNode = tempNode.next;
                 currentPos++;
             }
         }
@@ -165,6 +182,8 @@ class Main {
 
         System.out.println(friends.getCount());
         friends.insert(3, "Jignesh");
+        friends.traverseNodes();
+        friends.delete(3);
         friends.traverseNodes();
     }
 }

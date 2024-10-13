@@ -9,6 +9,10 @@ import static org.junit.jupiter.api.Assertions.*;
  *
  * Consider this class as a scratch pad for determining a solution to the dll problem
  */
+
+// we do not require this class anymore.
+
+@Deprecated
 class DoublyLinkedListTest {
 
     class Node {
