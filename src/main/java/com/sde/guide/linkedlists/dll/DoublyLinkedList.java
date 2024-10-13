@@ -157,6 +157,26 @@ class DoublyLinkedList<T> {
             }
         }
     }
+
+    // todo: This is the most interesting part reversing a doubly linked list.
+
+    void reverse() {
+        if(tail == null) {
+            System.out.println("No elements are present in the list");
+        } else {
+            System.out.println(":::Reversing the linked list:::");
+            Node tempNode = tail;
+            while(tempNode != null) {
+                Node reference = tempNode.prev;
+                tempNode.prev = tempNode.next;
+                tempNode.next = reference;
+                tempNode = tempNode.next;
+            }
+            Node reference = head;
+            head = tail;
+            tail = reference;
+        }
+    }
 }
 
 class Main {
@@ -185,5 +205,8 @@ class Main {
         friends.traverseNodes();
         friends.delete(3);
         friends.traverseNodes();
+        friends.reverse();
+        friends.traverseNodes();
+        friends.reverseTraversal();
     }
 }
